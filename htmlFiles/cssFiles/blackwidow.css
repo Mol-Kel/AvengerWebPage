@@ -1,0 +1,124 @@
+body {
+  background: linear-gradient(to bottom, #1c0c0c, #000000);
+  min-height: 100vh;
+  padding: 20px 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#blackwidow {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  background: rgba(20, 0, 0, 0.92);
+  border: 2px solid #ff0033;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(255, 0, 51, 0.6);
+  font-family: 'Lucida Console', monospace;
+  color: #ffe6e6;
+  animation: stealthFade 2s ease-in-out;
+}
+
+#blackwidow h2 {
+  font-family: 'Impact', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: #ff0033;
+  text-shadow: 0 0 8px #cc0000;
+  margin-bottom: 30px;
+}
+
+#blackwidow h4 {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: #ff4d6d;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 40px;
+}
+
+#blackwidow p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f8d7da;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+#blackwidow p b {
+  color: #ff4d6d;
+}
+
+#blackwidow #bgallery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#blackwidow #bgallery img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 16px;
+  border: 2px solid #ff0033;
+  box-shadow: 0 0 25px rgba(255, 51, 102, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#blackwidow #bgallery img:hover {
+  transform: scale(1.06) rotate(1deg);
+  box-shadow: 0 0 50px rgba(255, 0, 51, 0.6), 0 0 20px #cc0000;
+}
+
+@keyframes stealthFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#menu {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px 0;
+  gap: 50px;
+  box-shadow: 0 4px 10px rgba(255, 0, 51, 0.4);
+}
+
+#menu a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 800;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ff0033;
+  transition: 0.4s ease;
+}
+
+#menu a:hover {
+  color: #ff0033;
+}
+
+#menu a:hover::after {
+  width: 100%;
+}

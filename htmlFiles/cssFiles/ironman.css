@@ -1,0 +1,137 @@
+body {
+  background: linear-gradient(to bottom, #1a0000, #330000);
+  min-height: 100vh;
+  padding: 20px 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Iron Man Section */
+#ironman {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  background: rgba(20, 0, 0, 0.9);
+  border: 2px solid crimson;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.7);
+  font-family: 'Verdana', sans-serif;
+  color: #f0f0f0;
+
+  /* Correct animation setup */
+  animation: arcPulse 2s ease-out 1;
+}
+
+/* Headings */
+#ironman h2 {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: crimson;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px #000, 0 0 10px red;
+  margin-bottom: 30px;
+}
+
+#ironman h4 {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: #ff4d4d;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 40px;
+}
+
+/* Paragraphs */
+#ironman p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e5e5e5;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+#ironman p b {
+  color: #ff3333;
+}
+
+/* Image Gallery */
+#ironman #igallery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#ironman #igallery img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 16px;
+  border: 2px solid #ff4d4d;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#ironman #igallery img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 0 50px rgba(255, 80, 80, 0.6), 0 0 20px #ff1a1a;
+}
+
+/* Arc Reactor Pulse Animation */
+@keyframes arcPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    transform: scale(0.98);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 80, 80, 0.8);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    transform: scale(1);
+  }
+}
+
+/* Menu Bar */
+#menu {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px 0;
+  gap: 50px;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+#menu a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 800;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: crimson;
+  transition: 0.4s ease;
+}
+
+#menu a:hover {
+  color: crimson;
+}
+
+#menu a:hover::after {
+  width: 100%;
+}

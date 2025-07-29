@@ -1,0 +1,124 @@
+body {
+  background: linear-gradient(to bottom, #0b3d0b, #001a00);
+  min-height: 100vh;
+  padding: 20px 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#hulk {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  background: rgba(0, 20, 0, 0.9);
+  border: 2px solid #32cd32;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(50, 205, 50, 0.7);
+  font-family: 'Courier New', monospace;
+  color: #d4fcd4;
+  animation: smashIn 1.4s ease-out;
+}
+
+#hulk h2 {
+  font-family: 'Impact', sans-serif;
+  text-align: center;
+  font-size: 42px;
+  color: #7fff00;
+  text-shadow: 0 0 10px #32cd32;
+  margin-bottom: 30px;
+}
+
+#hulk h4 {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: #90ee90;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 40px;
+}
+
+#hulk p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #c3f9c3;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+#hulk p b {
+  color: #adff2f;
+}
+
+#hulk #hgallery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#hulk #hgallery img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 16px;
+  border: 2px solid #7fff00;
+  box-shadow: 0 0 25px rgba(124, 252, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#hulk #hgallery img:hover {
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0 0 50px rgba(0, 255, 0, 0.6), 0 0 20px #32cd32;
+}
+
+@keyframes smashIn {
+  from {
+    transform: scale(0.9) rotate(-2deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+#menu {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px 0;
+  gap: 50px;
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4);
+}
+
+#menu a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 800;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #32cd32;
+  transition: 0.4s ease;
+}
+
+#menu a:hover {
+  color: #32cd32;
+}
+
+#menu a:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,124 @@
+body {
+  background: linear-gradient(to bottom, #1a0033, #000011);
+  min-height: 100vh;
+  padding: 20px 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#hawkeye {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  background: rgba(10, 0, 25, 0.9);
+  border: 2px solid #9b59b6;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(155, 89, 182, 0.6);
+  font-family: 'Segoe UI', sans-serif;
+  color: #e6e0f8;
+  animation: arrowReveal 2s ease-in-out;
+}
+
+#hawkeye h2 {
+  font-family: 'Impact', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: #bb8fce;
+  text-shadow: 0 0 10px #8e44ad;
+  margin-bottom: 30px;
+}
+
+#hawkeye h4 {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: #d2b4de;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 40px;
+}
+
+#hawkeye p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f4e8ff;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+#hawkeye p b {
+  color: #c39bd3;
+}
+
+#hawkeye #hawkgallery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#hawkeye #hawkgallery img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 16px;
+  border: 2px solid #bb8fce;
+  box-shadow: 0 0 25px rgba(142, 68, 173, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#hawkeye #hawkgallery img:hover {
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 0 50px rgba(187, 143, 206, 0.6), 0 0 20px #9b59b6;
+}
+
+@keyframes arrowReveal {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#menu {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px 0;
+  gap: 50px;
+  box-shadow: 0 4px 10px rgba(142, 68, 173, 0.4);
+}
+
+#menu a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 800;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #9b59b6;
+  transition: 0.4s ease;
+}
+
+#menu a:hover {
+  color: #bb8fce;
+}
+
+#menu a:hover::after {
+  width: 100%;
+}
